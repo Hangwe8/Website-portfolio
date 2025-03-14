@@ -367,10 +367,83 @@ article .icon {
 /* Project */
 
 #projects {
+    position: relative;
     text-align: center;
 }
 
 #projects h1 {
     font-size: 3rem;
     font-weight: 800;
+}
+ .color-container {
+    border-color: rgb(163, 163,163);
+    background: rgb(250, 250, 250)
+ }
+
+ .project-img {
+    border-radius: 2rem;
+    width: 90%;
+    height: 90%;
+ }
+
+ .project-title{
+    margin: 1rem;
+    color: black;
+ }
+
+.project-btn {
+    color: black;
+    border-color: rgb(163, 163,163);
+}
+
+/* Contact */
+#contact {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 70vh;
+    text-align: center;
+}
+#contact h1 {
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.contact-info-upper-container {
+    display: flex;
+    justify-content: center;
+    border-radius: 2rem;
+    border: rgb(53, 53,53) 0.1rem solid;
+    border-color: rgb(163, 163,163);
+    background: rgb(250, 250, 250);
+    margin: 2rem auto;
+    padding: 0.2rem;
+}
+
+.contact-info-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 1.2rem;
+}
+
+.contact-info-container i {
+    font-size: 1.5rem;
+}
+
+.contact-icon {
+    cursor: default;
+    height: 10rem;
+}
+
+/* Footer */
+
+footer {
+    height: 26vh;
+    margin: 0 1rem;
+}
+
+footer p {
+    text-align: center;
+
 }
