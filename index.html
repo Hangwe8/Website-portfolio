@@ -1,213 +1,418 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Character encoding set to UTF-8 to support all characters and symbols -->
     <meta charset="UTF-8">
+
+    <!-- Ensures proper rendering on mobile devices and responsiveness -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title of the webpage (appears on the browser tab)-->
     <title>My Portfolio</title>
+
+    <!-- Link to the main stylesheet for general styles -->
     <link rel="stylesheet" href="style.css"/>
+
+    <!-- Link to media queries stylesheet for responsive design -->
     <link rel="stylesheet" href="mediaqueries.css"/>
+
+    <!-- FontAwesome CDN for icons (social media, menu icons, etc.)-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
  </head>
  <body>
+
+    <!-- ============================= -->
+    <!--   DESKTOP NAVIGATION BAR      -->
+    <!-- ============================= -->
     <nav id="desktop-nav">
+         <!-- LOGO / BRAND NAME -->
         <div class="logo"> Hangwelani Nefale </div>
+
+        <!-- NAVIGATION LINKS -->
         <div>
             <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <!-- Links to different sections of the page -->
+                <li><a href="#about">About</a></li> <!-- Scrolls to the About section -->
+                <li><a href="#experience">Experience</a></li> <!-- Scrolls to the Experience section -->
+                <li><a href="#projects">Projects</a></li> <!-- Scrolls to the Projects section -->
+                <li><a href="#contact">Contact</a></li> <!-- Scrolls to the Contact section -->
             </ul>
         </div>
+        
     </nav>
+
+    <!-- ============================= -->
+    <!--   MOBILE NAVIGATION (MENU)    -->
+    <!-- ============================= -->
     <nav id="hamburger-nav">
+        <!-- LOGO / BRAND NAME -->
         <div class="logo"> Hangwelani Nefale </div>
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="menu-links">
-                <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-                <li><a href="#projects"onclick="toggleMenu()">Projects</a></li>
-                <li><a href="#contact"onclick="toggleMenu()">Contact</a></li>
-            </div>
-        </div>
-    </nav>
-    <section id="profile">
-        <div class="section_pic-container">
-            <img src="Hangwe.JPG" alt="Hangwelani Nefale profile picture">
-        </div>
-        <div class="section_text">
-            <p class="section_text_p1">Hello I'm</p>
-            <h1 class="title">Hangwelani Nefale</h1>
-            <p class="section_text_p2">Full-Stack Developer</p>
-            <div class="btn-container">
-                <button class="btn btn-color-2" onclick="window.open('HANGWELANI.CV.pdf')">
-                    Download CV
-                </button>
-                <button class="btn btn-color-1" onclick="location.href='./#contact'">
-                    Contact Info
-                </button>
-            </div>
-            <div id="socials-container">
-                <i class="fa-brands fa-linkedin icon" onclick="window.open('https://www.linkedin.com/in/hangwelani-nefale-00835a284/?trk=opento_sprofile_details', '_blank')"></i>
-                <i class="fa-brands fa-github icon" onclick="window.open('https://github.com/Hangwe8', '_blank')"></i>
-            </div>
+
+    <!-- HAMBURGER MENU ICON -->
+    <div class="hamburger-menu">
+        
+        <!-- Icon for Opening/Closing the Menu -->
+        <div class="hamburger-icon" onclick="toggleMenu()">
+            <span></span> <!-- First bar of the hamburger icon -->
+            <span></span> <!-- Second bar -->
+            <span></span> <!-- Third bar -->
         </div>
 
+        <!-- MENU LINKS (HIDDEN BY DEFAULT) -->
+        <div class="menu-links">
+            <li><a href="#about" onclick="toggleMenu()">About</a></li> <!-- Clicking a link closes the menu -->
+            <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+            <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+
+    </div>
+    
+    </nav>
+
+    <!-- ============================= -->
+    <!--       PROFILE SECTION         -->
+    <!-- ============================= -->
+    <section id="profile">
+
+    <!-- Container for Profile Picture -->
+    <div class="section_pic-container">
+        <img src="profile1Face.jpg" alt=" Your LOGO / BRAND NAME - CAREER " loading="lazy">
+    </div>
+
+    <!-- Text Section -->
+    <div class="section_text">
+        <p class="section_text_p1">Hello I'm</p>
+
+        <!-- Name Heading -->
+        <h1 class="title">Hangwelani Nefale</h1> <!-- Enter your Name -->
+
+        <!-- Job Title -->
+        <p class="section_text_p2">Full-Stack Developer</p> <!-- Enter Your Job Title -->
+
+        <!-- BUTTONS: DOWNLOAD CV & CONTACT INFO -->
+        <div class="btn-container">
+            <!-- Button to Download CV (Opens CV File) -->
+            <button class="btn btn-color-2" onclick="window.open('HANGWELANI.CV.pdf')"> <!-- Upload your CV -->
+                Download CV
+            </button>
+
+            <!-- Button to Navigate to Contact Section -->
+            <button class="btn btn-color-1" onclick="location.href='./#contact'">
+                Contact Info
+            </button>
+        </div>
+
+        <!-- SOCIAL MEDIA LINKS -->
+        <div id="socials-container">
+            <!-- LinkedIn Profile (Opens in New Tab) -->
+            <i class="fa-brands fa-linkedin icon" 
+               onclick="window.open('https://www.linkedin.com/in/hangwelani-nefale-00835a284/?trk=opento_sprofile_details', '_blank')"> <!-- Enter your LinkedIn Profile -->
+            </i>
+
+            <!-- GitHub Profile (Opens in New Tab) -->
+            <i class="fa-brands fa-github icon" 
+               onclick="window.open('https://github.com/Hangwe8', '_blank')"> <!-- Enter your Github Profile -->
+            </i>
+        </div>
+
+    </div>
+
     </section>
+
+    <!-- ============================= -->
+    <!--        ABOUT SECTION          -->
+    <!-- ============================= -->
     <section id="about">
-        <p class="section_text_p1">Get To Know More</p>
-        <h1 class="title">About Me</h1>
-        <div class="section-container">
-            <div class="section_pic-container">
-                <img src="Hangwe2.jpg" alt="profile picture" class="about-pic"/>
-            </div>
-            <div class="about-details-container">
-                <div class="about-containers">
-                    <div class="details-container">
-                        <i class="icon fa-solid fa-fingerprint"></i>
-                        <h3>Experience</h3>
-                        <p>2+ years <br />Full-Stack Developer</p>
-                    </div>
-                    <div class="details-container">
-                        <i class="icon fa-solid fa-book-open"></i>
-                        <h3>Education</h3>
-                        <p>B.Sc. Bachelors Degree <br />HC-CSA</p>
-                    </div>
-                </div>
-                <div class="text-container">
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit ratione es
-                        t tempore ipsa et error, quisquam nemo officia corporis repellendus temporibus
-                         ducimus. Facere corrupti accusamus odit quidem beatae explicabo sapiente!
-                    </p>
-                </div>
-            </div>
+
+    <!-- Section Subtitle -->
+    <p class="section_text_p1">Get To Know More</p>
+
+    <!-- Section Title -->
+    <h1 class="title">About Me</h1>
+
+    <!-- Main Container to Hold Profile Picture & Details -->
+    <div class="section-container">
+
+        <!-- Left Side: Profile Picture -->
+        <div class="section_pic-container">
+            <!-- Image of Your Side Profile (Make sure your picture is available in your project folder) -->
+            <img src="Hangwe2.jpg" alt="profile picture" class="about-pic"/>
         </div>
-        <i class="icon fa-solid fa-angles-down"onclick="location.href='./#experience'"></i>
+
+        <!-- Right Side: About Me Details -->
+        <div class="about-details-container">
+
+            <!-- Experience & Education Container -->
+            <div class="about-containers">
+
+                <!-- Experience Section -->
+                <div class="details-container">
+                    <!-- Icon representing experience -->
+                    <i class="icon fa-solid fa-fingerprint"></i>
+                    <!-- Heading for experience -->
+                    <h3>Experience</h3>
+                    <!-- Description of experience -->
+                    <p>2+ years <br />Full-Stack Developer</p>
+                </div>
+
+                <!-- Education Section -->
+                <div class="details-container">
+                    <!-- Icon representing education -->
+                    <i class="icon fa-solid fa-book-open"></i>
+                    <!-- Heading for education -->
+                    <h3>Education</h3>
+                    <!-- Description of education -->
+                    <p>B.Sc. Bachelor's Degree <br />HC-CSA</p>
+                </div>
+
+            </div>
+
+            <!-- Personal Description Container -->
+            <div class="text-container">
+                <!-- Brief introduction about yourself (Replace with your real bio) -->
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                    Sit ratione est tempore ipsa et error, quisquam nemo officia corporis 
+                    repellendus temporibus ducimus. Facere corrupti accusamus odit quidem 
+                    beatae explicabo sapiente!
+                </p>
+            </div>
+
+        </div>
+    </div>
     </section>
+
+    <!-- ============================= -->
+    <!--       EXPERIENCE SECTION      -->
+    <!-- ============================= -->
     <section id="experience">
-        <p class="section_text_p1">Explore My</p>
-        <h1 class="title">Experience</h1>
-        <div class="experience-details-container">
-            <div class="about-containers">
-                <div class="details-container">
-                    <h2 class="experience-sub-title">Frontend Development</h2>
-                    <div class="article-container">
-                        <article>
-                            <i class="icon fa-solid fa-circle-check"></i>
-                            <div>
-                                <h3>HTML</h3>
-                                <p>Experience</p>
-                            </div>
-                        </article>
-                        <article>
-                            <i class="icon fa-solid fa-circle-check"></i>
-                            <div>
-                                <h3>CSS</h3>
-                                <p>Experience</p>
-                            </div>
-                        </article>
-                        <article>
-                            <i class="icon fa-solid fa-circle-check"></i>
-                            <div>
-                                <h3>JavaScript</h3>
-                                <p>Experience</p>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-                <div class="details-container">
-                    <h2 class="experience-sub-title">Backend Development</h2>
-                    <div class="article-container">
-                        <article>
-                            <i class="icon fa-solid fa-circle-check"></i>
-                            <div>
-                                <h3>MySQL</h3>
-                                <p>Experience</p>
-                            </div>
-                        </article>
-                        <article>
-                            <i class="icon fa-solid fa-circle-check"></i>
-                            <div>
-                                <h3>Python</h3>
-                                <p>Experience</p>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <i class="icon fa-solid fa-angles-down"onclick="location.href='./#projects'"></i>
+
+    <!-- Section Subtitle -->
+    <p class="section_text_p1">Explore My</p>
+
+    <!-- Section Title -->
+    <h1 class="title">Experience</h1>
+
+    <!-- Main Container for Experience Details -->
+    <div class="experience-details-container">
+
+        <!-- Container for Frontend & Backend Experience -->
+        <div class="about-containers">
+
+            <!-- Frontend Development Experience -->
+            <div class="details-container">
+
+                <!-- Subheading for Frontend Development -->
+                <h2 class="experience-sub-title">Frontend Development</h2>
+
+                <!-- Container for Frontend Skills -->
+                <div class="article-container">
+
+                    <!-- HTML Skill -->
+                    <article>
+                        <i class="icon fa-solid fa-circle-check"></i>
+                        <div>
+                            <h3>HTML</h3>
+                            <p>Experience</p>
+                        </div>
+                    </article>
+
+                    <!-- CSS Skill -->
+                    <article>
+                        <i class="icon fa-solid fa-circle-check"></i>
+                        <div>
+                            <h3>CSS</h3>
+                            <p>Experience</p>
+                        </div>
+                    </article>
+
+                    <!-- JavaScript Skill -->
+                    <article>
+                        <i class="icon fa-solid fa-circle-check"></i>
+                        <div>
+                            <h3>JavaScript</h3>
+                            <p>Experience</p>
+                        </div>
+                    </article>
+
+                    <!-- Add more frontend skills here -->
+                    <!-- Example:
+                    <article>
+                        <i class="icon fa-solid fa-circle-check"></i>
+                        <div>
+                            <h3>React</h3>
+                            <p>Experience</p>
+                        </div>
+                    </article>
+                    -->
+
+                </div> <!-- End of Frontend Skills Container -->
+
+            </div> <!-- End of Frontend Experience -->
+
+            <!-- Backend Development Experience -->
+            <div class="details-container">
+
+                <!-- Subheading for Backend Development -->
+                <h2 class="experience-sub-title">Backend Development</h2>
+
+                <!-- Container for Backend Skills -->
+                <div class="article-container">
+
+                    <!-- MySQL Skill -->
+                    <article>
+                        <i class="icon fa-solid fa-circle-check"></i>
+                        <div>
+                            <h3>MySQL</h3>
+                            <p>Experience</p>
+                        </div>
+                    </article>
+
+                    <!-- Python Skill -->
+                    <article>
+                        <i class="icon fa-solid fa-circle-check"></i>
+                        <div>
+                            <h3>Python</h3>
+                            <p>Experience</p>
+                        </div>
+                    </article>
+
+                    <!-- Add more backend skills here -->
+                    <!-- Example:
+                    <article>
+                        <i class="icon fa-solid fa-circle-check"></i>
+                        <div>
+                            <h3>Node.js</h3>
+                            <p>Experience</p>
+                        </div>
+                    </article>
+                    -->
+
+                </div> <!-- End of Backend Skills Container -->
+
+            </div> <!-- End of Backend Experience -->
+
+        </div> <!-- End of Frontend & Backend Experience Container -->
+
+    </div> <!-- End of Experience Details Container -->
+
     </section>
+
+    <!-- ============================= -->
+    <!--        PROJECTS SECTION       -->
+    <!-- ============================= -->
     <section id="projects">
-        <p class="section_text_p1">Browse My Recent</p>
-        <h1 class="title">Projects</h1>
-        <div class="experience-details-container">
-            <div class="about-containers">
+
+    <!-- Section Subtitle -->
+    <p class="section_text_p1">Browse My Recent</p>
+
+    <!-- Section Title -->
+    <h1 class="title">Projects</h1>
+
+    <!-- Main Container for Projects -->
+    <div class="experience-details-container">
+
+        <!-- Container for all projects -->
+        <div class="about-containers">
+
+            <!-- Project 1 (Blank) -->
             <div class="details-container color-container">
+
+                <!-- Container for project image -->
                 <div class="article-container">
-                    <img src="Project.JPG" alt="Project 1" class="project-img"/>
+                    <img src="ProjectPic.jpg" alt="Project 1" class="project-img"/>
                 </div>
-                <h2 class="experience-sub-title project-title">Hackathon</h2>
+
+                <!-- Project Title (Placeholder) -->
+                <h2 class="experience-sub-title project-title">Project Name</h2>
+
+                <!-- Buttons for GitHub and Live Demo -->
                 <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Hangwe8/HACKA'">
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='#'"> <!-- Add link to project on Github -->
                         Github
                     </button>
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='file:///Users/hrn/Downloads/HACKA-main-2/Hacakathon/index.html'">
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='#'"> <!-- Add link to Live Demo -->
                         Live Demo
                     </button>
                 </div>
-            </div>
+
+            </div> <!-- End of Project 1 -->
+
+            <!-- Project 2 (Blank) -->
             <div class="details-container color-container">
+
+                <!-- Container for project image -->
                 <div class="article-container">
-                    <img src="Project2.png" alt="Project 2" class="project-img"/>
+                    <img src="ProjectPic.jpg" alt="Project 2" class="project-img"/>
                 </div>
-                <h2 class="experience-sub-title project-title">Personal Website</h2>
+
+                <!-- Project Title (Placeholder) -->
+                <h2 class="experience-sub-title project-title">Project Name</h2>
+
+                <!-- Buttons for GitHub and Live Demo -->
                 <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Hangwe8/Website-portfolio'">
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='#'"> <!-- Add link to project on Github -->
                         Github
                     </button>
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='file:///Users/hrn/PORT/index.html'">
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='#'"> <!-- Add link to Live Demo -->
                         Live Demo
                     </button>
                 </div>
-            </div>
+
+            </div> <!-- End of Project 2 -->
+
+            <!-- Project 3 (Blank) -->
             <div class="details-container color-container">
+
+                <!-- Container for project image -->
                 <div class="article-container">
-                    <img src="Project3.JPG" alt="Project 3" class="project-img"/>
+                    <img src="ProjectPic.jpg" alt="Project 3" class="project-img"/>
                 </div>
-                <h2 class="experience-sub-title project-title">Personal Website [Scrapped]</h2>
+
+                <!-- Project Title (Placeholder) -->
+                <h2 class="experience-sub-title project-title">Project Name</h2>
+
+                <!-- Buttons for GitHub and Live Demo -->
                 <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Hangwe8/Personal-website'">
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='#'"> <!-- Add link to project on Github -->
                         Github
                     </button>
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='file:///Users/hrn/Downloads/HACKA-main-2/Hacakathon/index.html'">
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='#'"> <!-- Add link to Live Demo -->
                         Live Demo
                     </button>
                 </div>
-            </div>
-        </div>
-        </div>
-        <i class="icon fa-solid fa-angles-down"onclick="location.href='./#experience'"></i>
+
+            </div> <!-- End of Project 3 -->
+
+        </div> <!-- End of All Projects Container -->
+
+    </div> <!-- End of Projects Details Container -->
+
     </section>
+
+    <!-- ============================= -->
+    <!--        CONTACT SECTION        -->
+    <!-- ============================= -->
     <section id="contact">
         <p class="section_text_p1"> Get in Touch</p>
         <h1 class="title">Contact Me</h1>
         <div class="contact-info-upper-container">
             <div class="contact-info-container">
-                <p><a href="mailto:hangwe00@gmail.com"><i class="fa-solid fa-inbox"></i> hangwe00@gmail.com</a></p>
+                <!-- Add your Email -->
+                <p><a href="mailto:Example@gmail.com"><i class="fa-solid fa-inbox"></i> Example@gmail.com</a></p>
             </div>
             <div class="contact-info-container">
-                <p><a href="https://www.linkedin.com/in/hangwelani-nefale-00835a284/?trk=opento_sprofile_details"><i class="fa-brands fa-linkedin"></i> linkedin</a></p>
+                <!-- Add your LinkedIn Account -->
+                <p><a href="#"><i class="fa-brands fa-linkedin"></i> linkedin</a></p>
             </div>
         </div>
 
     </section>
+
+    <!-- ============================= -->
+    <!--            FOOTER             -->
+    <!-- ============================= -->
     <footer>
         <nav>
             <div class="nav-links-container">
@@ -219,8 +424,10 @@
                 </ul>
             </div>
         </nav>
-        <p> Copyright &#169; 2025 Hangwelani Nefale. All Rights Reserved</p>
+        <p> Copyright &#169; Your LOGO / BRAND NAME. All Rights Reserved</p>
     </footer>
+
+    <!-- END -->
     <script src="script.js"></script>
     
   </body>

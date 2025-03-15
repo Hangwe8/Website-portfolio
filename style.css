@@ -290,13 +290,6 @@ section {
     font-weight: 800;
 }
 
-.arrow { 
-    position: absolute;
-    width: 80px;
-    height: auto;
-    right: -6rem;
-    bottom: 2.5rem;
-}
 
 .details-container {
     padding: 1.5rem;
